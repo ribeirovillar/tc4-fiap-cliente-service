@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: fiap-cliente-service
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/customerdb}
+    username: ${SPRING_DATASOURCE_USERNAME:postgres}
+    password: ${SPRING_DATASOURCE_PASSWORD:postgres}
+    driver-class-name: org.postgresql.Driver
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+server:
+  port: ${SERVER_PORT:8080}
+
+
+logging:
+  level:
+    root: info
+    web: info
+    sql: info
+
+springdoc:
+  api-docs:
+    enabled: true
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui.html
