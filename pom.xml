@@ -11,8 +11,8 @@
     <groupId>com.fiap</groupId>
     <artifactId>fiap-cliente-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>fiap-cliente-service</name>
-    <description>fiap-cliente-service</description>
+    <name>tc4-fiap-cliente-service</name>
+    <description>Serviço REST para gerenciamento de clientes usando Spring</description>
     <url/>
     <licenses>
         <license/>
