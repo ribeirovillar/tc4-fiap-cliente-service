@@ -12,7 +12,7 @@ services:
       - pgdata:/var/lib/postgresql/data
 
   fiap-cliente-service:
-    build: .
+    image: draraujoo/fiap-cliente-service:latest
     container_name: fiap-cliente-service
     depends_on:
       - fiap-cliente-postgres

@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "5618aeea-0f72-41f4-9d26-bf34a656d7a8",
+		"name": "fiap-cliente-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "46530133"
+	},
+	"item": [
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Demostenis Villar\",\n    \"cpf\": \"06847362755\",\n    \"birthDate\": \"1985-09-26\",\n    \"address\": {\n        \"street\": \"Rua Artur\",\n        \"number\": \"78\",\n        \"city\": \"Recife\",\n        \"state\": \"Pernambuco\",\n        \"zipCode\": \"20715-364\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get By Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/customers/:id",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "97f701c6-370b-494f-9010-3a8f64f4c148"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Demostenis Villar\",\n    \"cpf\": \"06847362755\",\n    \"birthDate\": \"1985-09-26\",\n    \"address\": {\n        \"street\": \"Rua Artur Bual\",\n        \"number\": \"78\",\n        \"city\": \"Recife\",\n        \"state\": \"Pernambuco\",\n        \"zipCode\": \"20711-120\"\n    }\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/:id",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "f0dc1537-63c3-4ee3-b40f-5e456966be41"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"fullName\": \"Demostenis Villar\",\n    \"cpf\": \"06847362755\",\n    \"birthDate\": \"1985-09-26\",\n    \"address\": {\n        \"street\": \"Rua Artur\",\n        \"number\": \"78\",\n        \"city\": \"Recife\",\n        \"state\": \"Pernambuco\",\n        \"zipCode\": \"20715-364\"\n    }\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/customers/:id",
+					"host": [
+						"http://localhost:8080"
+					],
+					"path": [
+						"customers",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "f0dc1537-63c3-4ee3-b40f-5e456966be41"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
