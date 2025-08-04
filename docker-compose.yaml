@@ -9,10 +9,10 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - pgdata:/var/lib/postgresql/data
+      - pgdata_cliente:/var/lib/postgresql/data
 
   fiap-cliente-service:
-    image: draraujoo/fiap-cliente-service:latest
+    build: .
     container_name: fiap-cliente-service
     depends_on:
       - fiap-cliente-postgres
@@ -20,9 +20,8 @@ services:
       SPRING_DATASOURCE_URL: jdbc:postgresql://fiap-cliente-postgres:5432/customerdb
       SPRING_DATASOURCE_USERNAME: postgres
       SPRING_DATASOURCE_PASSWORD: postgres
-      SERVER_PORT: 8080
     ports:
       - "8080:8080"
 
 volumes:
-  pgdata:
+  pgdata_cliente:
